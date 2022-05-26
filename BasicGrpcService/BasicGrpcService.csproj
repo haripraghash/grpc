@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BasicGrpcClient\**" />
+    <Compile Remove="Protos\**" />
+    <Compile Remove="GrpcDependencies\**" />
+    <Compile Remove="greetings.proto\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Remove="BasicGrpcClient\**" />
+    <EmbeddedResource Remove="Protos\**" />
+    <EmbeddedResource Remove="GrpcDependencies\**" />
+    <EmbeddedResource Remove="greetings.proto\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="BasicGrpcClient\**" />
+    <None Remove="Protos\**" />
+    <None Remove="GrpcDependencies\**" />
+    <None Remove="greetings.proto\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Remove="BasicGrpcClient\**" />
+    <Content Remove="Protos\**" />
+    <Content Remove="GrpcDependencies\**" />
+    <Content Remove="greetings.proto\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="BasicGrpcClient\obj\BasicGrpcClient.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="BasicGrpcClient\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="BasicGrpcClient\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="greetings.proto\obj\greetings.proto.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="greetings.proto\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="greetings.proto\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="GrpcDependencies\obj\GrpcDependencies.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="GrpcDependencies\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="GrpcDependencies\obj\project.packagespec.json" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="GrpcDependencies\GrpcDependencies.csproj" />
+  </ItemGroup>
+
+</Project>
